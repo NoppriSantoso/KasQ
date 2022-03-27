@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">KasQ</string>
+    <string name="judul">KasQ</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="log_in">Log in</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="motto">Manage Your Life</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="pemasukan">Pemasukan</string>
+    <string name="pengeluaran">Pengeluaran</string>
+    <string name="deskripsi">Judul</string>
+    <string name="tipe">Tipe</string>
+    <string name="kategori">Kategori</string>
+    <string name="jumlah">Jumlah</string>
+    <string-array name="arrayPemasukan">
+        <item>Bonus</item>
+        <item>Gaji</item>
+        <item>Usaha</item>
+    </string-array>
+    <string-array name="arrayPengeluaran">
+        <item>Belanja Umum</item>
+        <item>Makanan</item>
+        <item>Pulsa Hp</item>
+        <item>Tagihan Listrik</item>
+        <item>Tagihan PDAM</item>
+        <item>Transportasi</item>
+    </string-array>
+    <string name="title_activity_item">item</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_register">registerActivity</string>
+</resources>
