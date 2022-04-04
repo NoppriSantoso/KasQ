@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,96 +7,101 @@
     tools:context=".AboutActivity"
     android:background="@color/slate_gray">
 
-    <ImageView
-        android:layout_marginTop="30dp"
-        android:id="@+id/iconAplikasi"
-        android:src="@drawable/asd2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <TextView
-        android:layout_marginTop="40dp"
-        android:id="@+id/judulTugas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tugas Proyek Rekayasa Perangkat Lunak"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/iconAplikasi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <TextView
-        android:layout_marginTop="40dp"
-        android:id="@+id/judulAplikasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aplikasi Catatan Keuangan"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/judulTugas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:id="@+id/iconAplikasi"
+            android:src="@drawable/asd2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/judulTugas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tugas Proyek Rekayasa Perangkat Lunak"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iconAplikasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/judulAplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi Catatan Keuangan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/judulTugas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-    <TextView
-        android:layout_marginTop="40dp"
-        android:id="@+id/dosenPembimbing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dosen Pembimbing Proyek"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/judulAplikasi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/dosenPembimbing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dosen Pembimbing Proyek"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/judulAplikasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-    <TextView
-        android:id="@+id/buKristina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kristina, S.T., M.Kom."
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/dosenPembimbing"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/buKristina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kristina, S.T., M.Kom."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/dosenPembimbing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-    <TextView
-        app:layout_goneMarginTop="40dp"
-        android:id="@+id/subjudul1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Desain dan Pemrograman"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@id/dosenPembimbing"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <TextView
-        android:id="@+id/Noppri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Noppri Santoso 20421348"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/subjudul1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <TextView
-        android:id="@+id/Yericho"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yericho Feriawan 20421359"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/Noppri"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            app:layout_goneMarginTop="40dp"
+            android:id="@+id/subjudul1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desain dan Pemrograman"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/dosenPembimbing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/Noppri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noppri Santoso 20421348"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/subjudul1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/Yericho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yericho Feriawan 20421359"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/Noppri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

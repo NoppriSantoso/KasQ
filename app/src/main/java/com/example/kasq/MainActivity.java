@@ -14,6 +14,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,6 +23,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.kasq.Model.Transaksi;
@@ -140,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.btnAbout:
                 Intent i = new Intent (getApplicationContext(),AboutActivity.class);
+                i.putExtra("user",user);
                 startActivity(i);
                 break;
             case R.id.btnExit:
@@ -149,5 +153,25 @@ public class MainActivity extends AppCompatActivity {
                 finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    boolean doubleBacktoExit = false;
+
+    @Override
+    public void onBackPressed() {
+        if(doubleBacktoExit){
+            super.onBackPressed();
+            return;
+        }
+        this.doubleBacktoExit = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBacktoExit=false;
+            }
+        }, 2000);
     }
 }

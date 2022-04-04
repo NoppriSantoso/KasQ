@@ -35,6 +35,7 @@ public class editActivity extends AppCompatActivity {
     RadioButton radioButton,rbPemasukan,rbPengeluaran;
     EditText Value,Description;
     DBHelper DB;
+    User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,7 @@ public class editActivity extends AppCompatActivity {
         String t3 = i.getStringExtra("category").toString();
         String t4 = i.getStringExtra("value").toString();
         String t5 = i.getStringExtra("description").toString();
-        User user = (User) i.getSerializableExtra("user");
+        user = (User) i.getSerializableExtra("user");
 
 
 
@@ -253,5 +254,12 @@ public class editActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(),MainActivity.class);
+        i.putExtra("user",user);
+        startActivity(i);
+        finish();
+    }
 
 }

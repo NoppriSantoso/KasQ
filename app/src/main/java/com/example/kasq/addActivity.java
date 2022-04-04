@@ -37,7 +37,7 @@ public class addActivity extends AppCompatActivity {
     DBHelper DB;
     transaksiAdapter transaksiAdapter;
     ArrayList<Transaksi> transaksis;
-
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class addActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add);
 
         //inisiasi
-        User user = (User) getIntent().getSerializableExtra("user");
+        user = (User) getIntent().getSerializableExtra("user");
         Category = findViewById(R.id.spinnerCategory);//kategori
         okButton = findViewById(R.id.btnOk);//tombol ok
         cancelButton = findViewById(R.id.btnCancel);//tombol cancel
@@ -58,7 +58,6 @@ public class addActivity extends AppCompatActivity {
 
         initDatePicker();
         date.setText(getTodayDate());
-
         type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -203,5 +202,12 @@ public class addActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(),MainActivity.class);
+        i.putExtra("user",user);
+        startActivity(i);
+        finish();
+    }
 
 }
