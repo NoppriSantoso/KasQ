@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/faded"
+    android:background="@color/cardview_dark_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
@@ -20,7 +20,8 @@
             android:gravity="center"
             android:text="@string/judul"
             android:textColor="@color/white"
-            android:textSize="28sp" />
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/motto"
@@ -31,20 +32,20 @@
             android:text="@string/motto"
             android:textColor="@color/white"
             android:textFontWeight="1"
-            android:textSize="12sp"
+            android:textSize="20sp"
             android:textStyle="italic" />
 
         <TextView
             android:id="@+id/Username"
-            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/judul"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="55dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginRight="20dp"
             android:text="@string/username"
-            android:textSize="24sp" />
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/lyUserName"
@@ -54,11 +55,10 @@
             android:layout_below="@+id/Username"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:background="#30ffffff"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
             android:drawablePadding="5dp"
             android:ems="10"
             android:hint="@string/username"
@@ -80,21 +80,22 @@
                 android:id="@+id/usernameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#30ffffff"
                 android:maxLength="20"
                 android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/password"
-            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/lyUserName"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="9dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginRight="20dp"
             android:text="@string/password"
-            android:textSize="24sp" />
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/pwlayout"
@@ -104,9 +105,8 @@
             android:layout_below="@+id/password"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="#30ffffff"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:hint="@string/password"
             android:lines="1"
             android:textColorHint="@color/soft_gray"
@@ -125,6 +125,7 @@
                 android:id="@+id/passwordtext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#30ffffff"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>

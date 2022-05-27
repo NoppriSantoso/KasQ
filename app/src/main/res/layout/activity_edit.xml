@@ -10,146 +10,205 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/contraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
 
-            <TextView
-                android:id="@+id/tvDatePicker"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btnDatePicker"
-                style="?android:spinnerStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#30ffffff"
-                android:onClick="openDatePicker"
-                android:text="JAN 01 2020"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tvDatePicker"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvTipe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Type"
-                android:textColor="@color/black"
-                android:textSize="24sp"
+                    <TextView
+                        android:id="@+id/tvDatePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDatePicker" />
+                    <Button
+                        android:id="@+id/btnDatePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#30ffffff"
+                        android:onClick="openDatePicker"
+                        android:text="JAN 01 2020"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvDatePicker"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioGroup
-                android:id="@+id/rgTipe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tvTipe"
-                app:layout_constraintTop_toBottomOf="@id/btnDatePicker">
+                </TableRow>
 
-                <RadioButton
-                    android:id="@+id/rdPemasukan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pemasukan" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/rdPengeluaran"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pengeluaran" />
-            </RadioGroup>
+                    <TextView
+                        android:id="@+id/tvTipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDatePicker" />
 
-            <TextView
-                android:id="@+id/tvKategori"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Category"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTipe" />
+                    <RadioGroup
+                        android:id="@+id/rgTipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvTipe"
+                        app:layout_constraintTop_toBottomOf="@id/btnDatePicker">
 
-            <Spinner
-                android:id="@+id/spinnerCategory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tvKategori"
-                app:layout_constraintTop_toBottomOf="@id/rgTipe" />
+                        <RadioButton
+                            android:id="@+id/rdPemasukan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="@string/pemasukan" />
 
-            <TextView
-                android:id="@+id/tvJumlah"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Value"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvKategori" />
+                        <RadioButton
+                            android:id="@+id/rdPengeluaran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pengeluaran" />
+                    </RadioGroup>
 
-            <EditText
-                android:id="@+id/jumlahValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="5"
-                android:gravity="center"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tvJumlah"
-                app:layout_constraintTop_toBottomOf="@id/spinnerCategory" />
+                </TableRow>
 
-            <TextView
-                android:id="@+id/tvDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvJumlah" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/DescriptionValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="5"
-                android:gravity="center"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tvJumlah"
-                app:layout_constraintTop_toBottomOf="@id/jumlahValue" />
+                    <TextView
+                        android:id="@+id/tvKategori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTipe" />
+
+                    <Spinner
+                        android:id="@+id/spinnerCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvKategori"
+                        app:layout_constraintTop_toBottomOf="@id/rgTipe" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvJumlah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Value"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKategori" />
+
+                    <EditText
+                        android:id="@+id/jumlahValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="Masukkan angka"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvJumlah"
+                        app:layout_constraintTop_toBottomOf="@id/spinnerCategory" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="@id/btnDatePicker"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvJumlah" />
+
+                    <EditText
+                        android:id="@+id/DescriptionValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:hint="Judul"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        app:layout_constraintStart_toEndOf="@id/tvJumlah"
+                        app:layout_constraintTop_toBottomOf="@id/jumlahValue" />
+
+                </TableRow>
+
+            </TableLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/btnEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@android:color/holo_blue_bright"
             android:text="Update Data"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_below="@id/contraintLayout"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp"/>
 
         <Button
@@ -157,9 +216,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btnEdit"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:text="View Data"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp" />
     </RelativeLayout>
 

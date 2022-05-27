@@ -22,7 +22,7 @@
             android:gravity="center"
             android:text="@string/judul"
             android:textColor="@color/black"
-            android:textSize="28sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/motto"
@@ -35,14 +35,14 @@
             android:text="@string/motto"
             android:textColor="@color/black"
             android:textFontWeight="1"
-            android:textSize="12sp"
+            android:textSize="20sp"
             android:textStyle="italic" />
 
         <TextView
             android:id="@+id/aturUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="16dp"
             android:text="Username"
             android:textSize="16sp"
@@ -56,10 +56,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/aturUsername"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
             android:background="#30ffffff"
             android:drawablePadding="5dp"
             android:ems="10"
@@ -92,7 +92,8 @@
             android:id="@+id/aturPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="9dp"
             android:text="Password"
             android:textSize="16sp"
             android:textStyle="normal"
@@ -105,8 +106,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/aturPassword"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:hint="@string/password"
             android:lines="1"
             android:textColorHint="@color/black"
