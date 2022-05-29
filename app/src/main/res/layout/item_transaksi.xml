@@ -25,17 +25,17 @@
                 android:id="@+id/cardViewTanggal"
                 android:layout_width="100dp"
                 android:layout_height="98dp"
-                android:layout_weight="1"
                 app:cardBackgroundColor="#DADADA"
+                android:layout_weight="1"
                 app:cardCornerRadius="15dp">
 
                 <TextView
                     android:id="@+id/tvTanggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:textStyle="bold"
+                    android:layout_gravity="center"
                     android:text="@string/tanggal"
                     android:textColor="@color/black" />
 
@@ -43,13 +43,13 @@
 
             <TextView
                 android:id="@+id/tvTipe"
+                android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
-                android:layout_toRightOf="@id/cardViewTanggal"
                 android:layout_weight="1"
                 android:textStyle="bold"
+                android:layout_toRightOf="@id/cardViewTanggal"
                 android:text="@string/tipe"
                 android:textColor="@color/black" />
 
@@ -72,8 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvKategori"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="7dp"
                 android:textStyle="bold"
+                android:layout_marginTop="7dp"
                 android:layout_toRightOf="@id/cardViewTanggal"
                 android:layout_weight="1"
                 android:text="@string/jumlah"
@@ -84,10 +84,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textStyle="bold"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="7dp"
                 android:layout_below="@id/tvJumlah"
+                android:textStyle="bold"
                 android:layout_toRightOf="@id/cardViewTanggal"
                 android:text="@string/deskripsi"
                 android:textColor="@color/black" />
@@ -99,10 +99,10 @@
                 android:layout_alignTop="@id/btnUpdate"
                 android:layout_alignParentRight="true"
                 android:layout_weight="1"
-                android:textStyle="bold"
-                android:backgroundTint="@color/material_dynamic_neutral60"
+                android:backgroundTint="@color/soft_green"
                 android:drawableLeft="@drawable/ic_baseline_edit_24"
-                android:text="edit" />
+                android:text="edit"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnDelete"
@@ -111,10 +111,10 @@
                 android:layout_below="@id/btnUpdate"
                 android:layout_alignEnd="@id/btnUpdate"
                 android:layout_weight="1"
-                android:textStyle="bold"
-                android:backgroundTint="@color/material_dynamic_neutral60"
+                android:backgroundTint="@color/soft_green"
                 android:drawableLeft="@drawable/ic_baseline_delete_outline_24"
-                android:text="Delete" />
+                android:text="Delete"
+                android:textStyle="bold" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
 import android.content.Intent;
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     DBHelper DB;
     User user;
     private Button btnUpdate,btnDelete;
-    SwipeRefreshLayout refreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
         add = findViewById(R.id.fab);
         recyclerView = findViewById(R.id.recycle_view);
-        refreshLayout = findViewById(R.id.RefreshLayout);
 
         user = (User) getIntent().getSerializableExtra("user");
         displayDataSaldo();
@@ -74,14 +71,6 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(layoutManager);
 
-        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                displayDataSaldo();
-                transaksiAdapter.notifyDataSetChanged();
-                refreshLayout.setRefreshing(false);
-            }
-        });
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
