@@ -21,6 +21,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:gravity="center"
             android:text="@string/judul"
+            android:fontFamily="@font/pacifico_regular"
             android:textColor="@color/black"
             android:textSize="40sp" />
 
@@ -35,6 +36,7 @@
             android:text="@string/motto"
             android:textColor="@color/black"
             android:textFontWeight="1"
+            android:fontFamily="@font/pacifico_regular"
             android:textSize="20sp"
             android:textStyle="italic" />
 
@@ -42,7 +44,7 @@
             android:id="@+id/aturUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="16dp"
             android:text="Username"
             android:textSize="16sp"
@@ -142,6 +144,7 @@
             android:gravity="center"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
+            android:maxLength="20"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnCancelSet"
